@@ -231,6 +231,7 @@ private _cc = 0;
 					sleep 0.2;
 				};
 			}foreach(_val);
+			sleep 2;
 			//Remove spawn protection, check if local in case it has transferred to HC
 			{
 				if (!isNull _x) then {
@@ -239,7 +240,6 @@ private _cc = 0;
 						_x allowDamage true;
 						_x enableDynamicSimulation true;
 					} else {
-						[_x,true] remoteExecCall ["enableSimulation",_x];
 						[_x,true] remoteExecCall ["allowDamage",_x];
 						[_x,true] remoteExecCall ["enableDynamicSimulation",_x];
 					}
